@@ -35,11 +35,7 @@ class LabTests(unittest.TestCase):
                 
                 try:
                     # Run the function with args
-<<<<<<< HEAD
-                    result = func(*args)
-=======
                     result = json.loads(json.dumps(func(*args)))
->>>>>>> 60fda15 (Lab questions 1)
                     
                     # Assert the result matches expected
                     self.assertEqual(result, expected,
