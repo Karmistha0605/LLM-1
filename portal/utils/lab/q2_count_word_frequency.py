@@ -22,5 +22,15 @@ def q2_count_word_frequency(paragraph):
         >>> q2_count_word_frequency("hello world hello")
         {'hello': 2, 'world': 1}
     """
-    # Your code here
+    word = paragraph.split()
+    
+    frequency = {}
+
+    for i in word:
+        if i in frequency:
+            frequency[i] = frequency[i] + 1
+        else:
+            frequency[i] = 1 
+
+    return frequency
     pass

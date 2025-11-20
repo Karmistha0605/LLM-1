@@ -23,6 +23,11 @@ def q1_count_character_frequency(text):
         {'h': 1, 'e': 1, 'l': 2, 'o': 1}
     """
     frequency = {}
+<<<<<<< HEAD
+    for char in text:
+        frequency[char] = frequency.get(char, 0) + 1
+    return frequency
+=======
     for i in text:
         if i in frequency:
             frequency[i] += 1
@@ -31,3 +36,4 @@ def q1_count_character_frequency(text):
     return frequency
     
     pass
+>>>>>>> 60fda15 (Lab questions 1)

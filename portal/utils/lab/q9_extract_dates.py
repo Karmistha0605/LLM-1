@@ -24,5 +24,6 @@ def q9_extract_dates(text):
         >>> q9_extract_dates("Event on 25/12/2024 and 01/01/2025")
         ['25/12/2024', '01/01/2025']
     """
-    # Your code here
+    matches = re.findall(r'\d{2}[-/]\d{2}[-/]\d{4}', text)
+    return matches
     pass

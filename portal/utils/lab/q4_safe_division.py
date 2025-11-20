@@ -27,5 +27,8 @@ def q4_safe_division(numerator, denominator):
         >>> q4_safe_division(10, 0)
         None
     """
-    # Your code here
+    if denominator == 0:
+        return None
+    else:
+        return numerator/denominator
     pass

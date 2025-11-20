@@ -30,5 +30,8 @@ def q6_is_palindrome(text):
         >>> q6_is_palindrome("A man a plan a canal Panama")
         True
     """
-    # Your code here
+    if text == text[::-1]: 
+        return True
+    else:
+        return False
     pass

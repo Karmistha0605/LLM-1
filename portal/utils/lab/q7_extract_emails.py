@@ -24,5 +24,6 @@ def q7_extract_emails(text):
         >>> q7_extract_emails("Contact us at hello@example.com or support@test.org")
         ['hello@example.com', 'support@test.org']
     """
-    # Your code here
+    matches = re.findall(r'\w+@\w+.com' , text)
+    return matches
     pass

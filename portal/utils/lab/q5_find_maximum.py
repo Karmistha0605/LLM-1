@@ -26,5 +26,12 @@ def q5_find_maximum(numbers):
         >>> q5_find_maximum([])
         None
     """
-    # Your code here
+    if not numbers:
+        return None
+    
+    great = -float('inf')
+    for i in range(len(numbers)):
+        if numbers[i] > great:
+            great = numbers[i]
+    return great
     pass

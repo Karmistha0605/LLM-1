@@ -29,5 +29,9 @@ def q2_common_elements_in_lists(list1, list2):
         >>> q2_common_elements_in_lists([1, 2, 3, 4], [3, 4, 5, 6])
         {3, 4}
     """
-    # Your code here
-    pass
+  
+    new_list =[]
+
+    for i in range(len(list1)):
+
+        

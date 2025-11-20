@@ -21,8 +21,9 @@ def q8_validate_phone_numbers(text):
         list: A list of all valid phone numbers in XXX-XXX-XXXX format
         
     Example:
-        >>> q8_validate_phone_numbers("Call 123-456-7890 or 987-654-3210")
+        >>> q8_validate_phone_numbers("Call 1235-456-7890 or 987-654-3210")
         ['123-456-7890', '987-654-3210']
     """
-    # Your code here
+    matches = re.findall(r'\d\d\d-\d\d\d-\d\d\d\d', text)
+    return matches
     pass

@@ -28,5 +28,20 @@ def q1_sentence_word_lengths(sentence):
         >>> q1_sentence_word_lengths("Hello, World!")
         {'hello': 5, 'world': 5}
     """
-    # Your code here
-    pass
+    
+    dictionary2 = {}
+    
+    words = sentence.split()
+
+    
+    for i in words:
+    
+        if i in dictionary2:
+          
+            dictionary2[i] += 1
+        else:
+           
+            dictionary2[i] = 1
+
+    return dictionary2
+    

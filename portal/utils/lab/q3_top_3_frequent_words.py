@@ -22,5 +22,15 @@ def q3_top_3_frequent_words(text):
         >>> q3_top_3_frequent_words("the cat and the dog and the bird")
         [('the', 3), ('and', 2), ('cat', 1)]
     """
-    # Your code here
-    pass
+    word = text.split()
+    frequency = {}
+
+    for i in word:
+        if i in frequency:
+            frequency[i] += 1
+        else:
+            frequency[i] = 1
+    
+    top = sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:3] #first change the dictionary into list //Lambla x (is each tuple) x:[1] requests the index 1 that is the frequency 
+     
+    return top
