@@ -29,22 +29,15 @@ def q1_sentence_word_lengths(sentence):
         {'hello': 5, 'world': 5}
     """
 
-    dict2 = {}
-    
-    words = sentence.split()  # split the sentence into words
+    new_dict = dict()
+    words = sentence.split()
 
     for word in words:
-        # convert to lowercase
         word_lower = word.lower()
-        
-        # remove punctuation manually
-        clean_word = ""
-        for char in word_lower:
-            if char.isalnum():  # keep only letters and numbers
-                clean_word += char
-
-        # store the length of the word in the dictionary
-        dict2[clean_word] = len(clean_word)
-    
-    return dict2
+        new_word = ""
+        for i in word_lower:
+            if i.isalnum(): #checks if there is any punctution or not proceeds if not a punctuation
+                new_word += i
+        new_dict[new_word] = len(new_word) #assigns the word as key and its len as the value
+    return new_dict
 
