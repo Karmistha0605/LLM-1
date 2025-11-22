@@ -31,17 +31,20 @@ def q1_sentence_word_lengths(sentence):
 
     dict2 = {}
     
-    words = sentence.split() # using inbuilt function to split the sentence into words
+    words = sentence.split()  # split the sentence into words
 
- 
     for word in words:
+        # convert to lowercase
+        word_lower = word.lower()
+        
+        # remove punctuation manually
+        clean_word = ""
+        for char in word_lower:
+            if char.isalnum():  # keep only letters and numbers
+                clean_word += char
 
-        if word in dict2:
- 
-            dict2[word] += 1 # if the character already in dictionary add 
-        else:
+        # store the length of the word in the dictionary
+        dict2[clean_word] = len(clean_word)
     
-            dict2[word] = 1
-
-  
     return dict2
+
