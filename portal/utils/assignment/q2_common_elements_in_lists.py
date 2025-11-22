@@ -29,9 +29,6 @@ def q2_common_elements_in_lists(list1, list2):
         >>> q2_common_elements_in_lists([1, 2, 3, 4], [3, 4, 5, 6])
         {3, 4}
     """
-  
-    new_list =[]
-
-    for i in range(len(list1)):
-
-        
+    a = set(list1) & set(list2) #convert the list into set and use and to combine the list removing the repeated numbers
+    return a
+    

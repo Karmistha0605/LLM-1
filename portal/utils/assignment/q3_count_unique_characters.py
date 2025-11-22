@@ -26,5 +26,11 @@ def q3_count_unique_characters(text):
         >>> q3_count_unique_characters("Hello World")
         8
     """
-    # Your code here
-    pass
+    count = 0
+    a = []
+
+    for char in text:
+        if char != " " and char not in a: #only append into the list if not a space and if the character not already in a
+            a.append(char)
+            count +=1 #increase the count
+    return count

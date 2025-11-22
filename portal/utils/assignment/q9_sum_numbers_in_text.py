@@ -22,5 +22,13 @@ def q9_sum_numbers_in_text(text):
         >>> q9_sum_numbers_in_text("I have 3 apples and 4 oranges")
         7
     """
-    # Your code here
-    pass
+    import re
+
+    sum = 0
+
+    matches = re.findall(r'\d+', text) #regex helps extract the digits in str format
+
+    for i in matches:
+        sum += int(i) #using int because arithemetic operators can only be used in integers
+
+    return sum

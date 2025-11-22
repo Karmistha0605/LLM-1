@@ -24,5 +24,10 @@ def q8_remove_duplicates(items):
         >>> q8_remove_duplicates([1, 2, 2, 3, 4, 3, 5])
         [1, 2, 3, 4, 5]
     """
-    # Your code here
-    pass
+    new_list = []
+
+    for i in items: #loops through all the numbers in the list
+        if i not in new_list:
+            new_list.append(i)
+    return new_list
+

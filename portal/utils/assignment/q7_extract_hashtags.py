@@ -27,5 +27,9 @@ def q7_extract_hashtags(text):
         >>> q7_extract_hashtags("Check out #python and #coding!")
         ['python', 'coding']
     """
-    # Your code here
-    pass
+    import re
+
+    new = re.findall(r'#(\w+)',text)
+
+    return new
+

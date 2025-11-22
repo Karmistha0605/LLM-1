@@ -32,5 +32,10 @@ def q4_safe_factorial(n):
         >>> q4_safe_factorial(-5)
         None
     """
-    # Your code here
-    pass
+    if n < 0 or not isinstance(n, int): #using inbuilt isinstance to check if it is an integer or not
+        return None
+    
+    factorial = 1
+    for i in range(1, n+1):
+        factorial *= i #factorial is n!
+    return factorial

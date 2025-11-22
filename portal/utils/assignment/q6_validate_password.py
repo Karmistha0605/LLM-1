@@ -39,5 +39,21 @@ def q6_validate_password(password):
         >>> q6_validate_password("weakpass")
         False
     """
-    # Your code here
-    pass
+    upper = False # initializing the variable
+    lower = False
+    digit = False
+
+    if len(password) < 8:
+        return False
+    
+    for i in password:
+        if i.isupper():
+            upper = True
+        elif i.islower():
+            lower = True
+        elif i.isdigit():
+            digit = True
+    if upper and lower and digit: # if all the condition is true then only return a valid pass
+        return True
+    else:
+        return False

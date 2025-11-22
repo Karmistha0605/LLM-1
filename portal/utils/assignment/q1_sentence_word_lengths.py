@@ -28,18 +28,20 @@ def q1_sentence_word_lengths(sentence):
         >>> q1_sentence_word_lengths("Hello, World!")
         {'hello': 5, 'world': 5}
     """
+
+    dict2 = {}
     
-    words = sentence.split()
+    words = sentence.split() # using inbuilt function to split the sentence into words
 
  
     for word in words:
 
-        if word in counts:
+        if word in dict2:
  
-            counts[word] += 1
+            dict2[word] += 1 # if the character already in dictionary add 
         else:
     
-            counts[word] = 1
+            dict2[word] = 1
 
   
-    return counts
+    return dict2

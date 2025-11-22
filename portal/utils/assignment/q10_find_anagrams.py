@@ -27,5 +27,8 @@ def q10_find_anagrams(word, word_list):
         >>> q10_find_anagrams("listen", ["silent", "enlist", "hello", "world"])
         ['silent', 'enlist']
     """
-    # Your code here
-    pass
+    anagram = []
+    for i in word_list:
+        if sorted(i) == sorted(word) and i != word: #sorted is an inbuilt function which takes a word and sorts it alphabetically
+            anagram.append(i)
+    return anagram
